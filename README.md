@@ -7,7 +7,13 @@
 
 安装使用
 
-首先
+首先npm install全局安装
+
+安装饿了么组件npm i element-ui -S
+
+安装v-resource插件npm install vue-resource
+
+npm run
 
 基于vue2官方文档基础所做的一个简易的搜索界面，涵盖了vue的基础标签以及
 vue过渡的最基本的效果，并简单使用了饿了么团队的组件。不定时更新中~~~
