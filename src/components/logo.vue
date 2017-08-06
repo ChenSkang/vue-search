@@ -72,6 +72,7 @@
     width: 600px;
     height: 140px;
     position: relative;
+    right: 35px;
   }
 
   .main-logo img {
