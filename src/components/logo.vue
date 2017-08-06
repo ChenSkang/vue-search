@@ -1,6 +1,6 @@
 <template>
   <div class="main-logo">
-    <img :src="logos[selectedNow].imgSrc" @click="logoSelect" />
+    <router-link :to="searchRouter"><img :src="logos[selectedNow].imgSrc" @click="logoSelect" /></router-link>
     <span class="logoList-arrow" @click="logoSelect"></span>
     <transition name="logofade">
       <ul v-show="logoListFlag&&mouseLeaveFlag" class="logoList" @mouseleave="mouseLeaveList">
@@ -23,6 +23,7 @@
         logoNow: -1,
         logoListFlag: false,
         mouseLeaveFlag: false,
+        searchRouter: '360',
         logos: [{
           imgSrc: require('../assets/360_logo.png')
         }, {
@@ -43,6 +44,13 @@
       logoSelected (index) {
         this.selectedNow = index
         this.logoListFlag = false
+        if (index === 0) {
+          this.searchRouter = '360'
+        } else if (index === 1) {
+          this.searchRouter = 'baidu'
+        } else {
+          this.searchRouter = 'sougou'
+        }
         this.$emit('getIndex', this.selectedNow)
       },
       mouseLeaveList () {
