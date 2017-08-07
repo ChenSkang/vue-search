@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <some></some>
+    <some id="search"></some>
+    <foot id="footer"></foot>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
   import some from './components/search-some.vue'
+  import foot from './components/footer.vue'
   export default {
     components: {
-      some
+      some,
+      foot
     }
   }
 </script>
@@ -26,7 +29,7 @@
     background-size: 100% 100%;
   }
 
-  #app {
+  #search {
     color: #2c3e50;
     width: 600px;
     font-family: Source Sans Pro, Helvetica, sans-serif;
@@ -36,6 +39,13 @@
     left: 50%;
     margin-left: -300px;
     margin-top: -100px;
+  }
+
+  #footer{
+    width: 100%;
+    position: absolute;
+    margin-left: 0;
+    bottom: 0;
   }
 </style>
 
