@@ -2,6 +2,7 @@
   <div id="app">
     <some id="search"></some>
     <foot id="footer"></foot>
+    <menu id="menu"></menu>
     <router-view></router-view>
   </div>
 </template>
@@ -9,10 +10,12 @@
 <script>
   import some from './components/search-some.vue'
   import foot from './components/footer.vue'
+  import menu from './components/Menu.vue'
   export default {
     components: {
       some,
-      foot
+      foot,
+      menu
     }
   }
 </script>

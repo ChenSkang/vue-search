@@ -41,7 +41,8 @@
       logo,
       ElButton,
       ElInput,
-      ElCol},
+      ElCol
+    },
     data () {
       return {
         myData: [],
