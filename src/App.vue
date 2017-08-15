@@ -3,7 +3,6 @@
     <some id="search"></some>
     <foot id="footer"></foot>
     <menu id="menu"></menu>
-    <router-view></router-view>
   </div>
 </template>
 
