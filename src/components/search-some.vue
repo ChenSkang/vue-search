@@ -108,7 +108,7 @@
   }
 
   .search-ipt input{
-    border: 1px solid #e4e4e4;
+    border: 1px solid #20A0FF;
     box-sizing: border-box;
     width: 500px;
     height: 45px;
@@ -121,8 +121,8 @@
   .search-btn {
     height: 45px;
     width: 100px;
-    border: 1px solid mediumseagreen;
-    background-color: mediumseagreen;
+    border: 1px solid #20A0FF;
+    background-color: #20A0FF;
     color: white;
     font-size: 18px;
     float: left;

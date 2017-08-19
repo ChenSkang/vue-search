@@ -1,7 +1,6 @@
 <template>
   <div class="main-logo">
-    <router-link :to="searchRouter"><img :src="logos[selectedNow].imgSrc" @click="logoSelect" /></router-link>
-    <span class="logoList-arrow" @click="logoSelect"></span>
+    <img :src="logos[selectedNow].imgSrc" @click="logoSelect" />
     <transition name="logofade">
       <ul v-show="logoListFlag&&mouseLeaveFlag" class="logoList" @mouseleave="mouseLeaveList">
         <li v-for="(item, index) in logos"
@@ -19,11 +18,10 @@
   export default {
     data () {
       return {
-        selectedNow: 0,
+        selectedNow: 1,
         logoNow: -1,
         logoListFlag: false,
         mouseLeaveFlag: false,
-        searchRouter: '360',
         logos: [{
           imgSrc: require('../assets/360_logo.png')
         }, {
@@ -44,13 +42,6 @@
       logoSelected (index) {
         this.selectedNow = index
         this.logoListFlag = false
-        if (index === 0) {
-          this.searchRouter = '360'
-        } else if (index === 1) {
-          this.searchRouter = 'baidu'
-        } else {
-          this.searchRouter = 'sougou'
-        }
         this.$emit('getIndex', this.selectedNow)
       },
       mouseLeaveList () {
@@ -72,7 +63,8 @@
     width: 600px;
     height: 140px;
     position: relative;
-    right: 35px;
+    left: 50%;
+    margin-left: -300px;
   }
 
   .main-logo img {
@@ -80,17 +72,6 @@
     margin: 0 auto;
     user-select: none;
     cursor: pointer;
-  }
-
-  .logoList-arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 8px solid;
-    border-color: #000 transparent transparent transparent;
-    right: 100px;
-    top: 66px;
-    cursor: pointer
   }
 
   .logoList {
