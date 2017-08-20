@@ -2,20 +2,20 @@
   <div class="hello">
     <some id="search"></some>
     <foot></foot>
-    <menu id="menu"></menu>
+    <header></header>
   </div>
 </template>
 
 <script>
   import some from './search-some.vue'
   import foot from './footer.vue'
-  import menu from './Menu.vue'
+  import header from './header.vue'
   export default {
     name: 'home',
     components: {
       some,
       foot,
-      menu
+      header
     }
   }
 </script>
