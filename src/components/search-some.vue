@@ -2,7 +2,7 @@
   <div>
     <logo @getIndex="getIndex"></logo>
     <el-row class="search-input">
-      <el-col span="20">
+      <el-col :span="20">
         <div class="search-ipt">
           <input type="text"
                  v-model="message"
@@ -12,7 +12,7 @@
                  @keydown.enter="search"/>
         </div>
       </el-col>
-      <el-col span="4">
+      <el-col :span="4">
         <button class="search-btn" @click="search">搜索</button>
       </el-col>
     </el-row>
